@@ -32,7 +32,7 @@ export default App;
 Pegar outro carrinho 
 https://www.youtube.com/watch?v=lATafp15HWA&ab_channel=WebDevSimplified
 
-15:55
+33:00
 
 
 */

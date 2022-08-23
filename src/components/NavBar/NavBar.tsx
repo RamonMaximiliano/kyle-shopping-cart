@@ -3,7 +3,7 @@ import cart from '../../images/cart.png'
 import './styles.css'
 
 function test() {
-    console.log("Hello there")
+    console.log("Hello there!")
 }
 
 export const NavBar = () => {

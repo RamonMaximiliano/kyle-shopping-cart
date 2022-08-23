@@ -1,9 +1,10 @@
 .nav-bar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    height: 40px;
+    min-height: 40px;
     max-width: 800px;
-    background-color: #A1BDF3;
+    background-color: #88aefa;
     align-items: center;
     box-shadow: 1px 1px 10px 1px #6b94e7;
     margin: auto;
@@ -13,7 +14,7 @@
 }
 
 .cart-button {
-    background-color: #A1BDF3;
+    background-color: #88aefa;
     width: 50px;
     height: 50px;
     background-size:cover;
@@ -23,28 +24,30 @@
     text-align: center;
     border-radius: 50%;
     border: 0.1px solid rgba(0, 0, 255, 0.466);
+    cursor:pointer;
 }
 
-.nav-items {
-    background-color: #A1BDF3;
+.nav-items{
+    background-color: #88aefa;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 180px;
+    max-width: 250px;
     margin-left: 20px;
     text-decoration: none;
 }
 
 .nav-items p {
-    background-color: #A1BDF3;
-    width: 60px;
+    background-color: #88aefa;
+    width: 80px;
     text-decoration: none;
 }
 
 .nav-items-link {
     text-decoration: none;
-    background-color: #A1BDF3;
-    color: black;
+    background-color: #88aefa;
+    color: white;
+    font-size: 18px;
 }
 
 .nav-items-link:hover {
