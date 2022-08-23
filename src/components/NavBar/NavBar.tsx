@@ -1,19 +1,21 @@
 import { Link } from 'react-router-dom'
-import cart from '../../images/shopping-cart.png'
+import cart from '../../images/cart.png'
 import './styles.css'
 
-function test(){
+function test() {
     console.log("Hello there")
 }
 
 export const NavBar = () => {
     return (
-        <>
-            <Link to='/'>Home</Link>
-            <Link to='/store'>Store</Link>
-            <Link to='/about'>About</Link>
+        <div className="nav-bar">
+            <div className="nav-items">
+                <Link to='/' className="nav-items-link"><p>Home</p></Link>
+                <Link to='/store' className="nav-items-link"><p>Store</p></Link>
+                <Link to='/about' className="nav-items-link"><p>About</p></Link>
+            </div>
             <button className="cart-button" style={{ backgroundImage: `url(${cart})` }} onClick={test}></button>
-        </>
+        </div>
     )
 }
 
