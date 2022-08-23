@@ -1,4 +1,10 @@
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import cart from '../../images/shopping-cart.png'
+import './styles.css'
+
+function test(){
+    console.log("Hello there")
+}
 
 export const NavBar = () => {
     return (
@@ -6,9 +12,8 @@ export const NavBar = () => {
             <Link to='/'>Home</Link>
             <Link to='/store'>Store</Link>
             <Link to='/about'>About</Link>
-            <div className="cart-button">Cart</div>
-            <img src='../../images/shopping-cart.png'/>
+            <button className="cart-button" style={{ backgroundImage: `url(${cart})` }} onClick={test}></button>
         </>
     )
-} 
+}
 
