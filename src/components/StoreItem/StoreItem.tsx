@@ -1,19 +1,22 @@
 /* import './styles.css' */
 
+
+
 type ItemProps = {
     key?:number,
     name?:string,
     price?:number,
-    imgUrl?:string 
+    imgUrl?:any 
 }
+
 
 export const StoreItem = ( {key,name,price ,imgUrl }:ItemProps) => {
     return (
         <div>
-            { name }
-            {key}
-            { price }
-            <img src={imgUrl}/>
+            <p>{name}</p>
+            <p>{key}</p>
+            <p>{price}</p>
+            <img src={imgUrl} alt="test"/>
         </div>
     )
 }
