@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { About } from './pages/About'
 import { Home } from './pages/Home'
+import { ShoppingCart } from './context/ShoppingCartContext'
 import { Store } from './pages/Store/Store'
 import {NavBar} from './components/NavBar/NavBar'
 import { Routes, Route } from 'react-router-dom'
@@ -10,6 +11,7 @@ import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <>
+    <ShoppingCart>
     <div>
       <NavBar/>
       </div>
@@ -18,7 +20,9 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/store" element={<Store />}></Route>
       </Routes>
+      </ShoppingCart>
     </>
+
   );
 }
 
@@ -28,14 +32,13 @@ export default App;
 
 /* 
 
+HOME - Na home page, fazer um carrosel de produtos girando a cada tantos segundos 
+STORE - o carrinho vai ser um array de objects atualizado pelo context
+ABOUT - Link para o portfolio e Github
 
-Pegar outro carrinho 
 https://www.youtube.com/watch?v=lATafp15HWA&ab_channel=WebDevSimplified
 
 33:00
 
-
-
-o carrinho vai ser um array de objects atualizado pelo context
 
 */

@@ -15,7 +15,7 @@ type storeItem = {
 export function Store() {
     return (
         <>
-            <div>Store</div>
+            <h2 className="store-title">Store</h2>
             <div className="store-div">
             {
                 itemsArray.map((item:storeItem) => 

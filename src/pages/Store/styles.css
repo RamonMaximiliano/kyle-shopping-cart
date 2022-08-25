@@ -1,5 +1,14 @@
 .store-div{
     display:flex;
     flex-wrap: wrap;
-    max-width:1000px;
+    max-width:980px;
+    margin:auto;
+    align-items: center;
+    text-align: center;
+}
+
+.store-title{
+    width:80px;
+    margin:auto;
+    color: #2455aa;
 }
