@@ -32,7 +32,8 @@ export default App;
 
 /* 
 
-HOME - Na home page, fazer um carrosel de produtos girando a cada tantos segundos 
+HOME - Na home page, fazer um carrosel de produtos girando a cada tantos segundos e conforme a foto embaixo um banner com descrição do produto e detalhes técnicos do mesmo que atualiza conforme a foto do carrosel 
+SHOPPING CART PAGE: dinamic on the right when you click in the cart, add also a finish purchase button with a window alert
 STORE - o carrinho vai ser um array de objects atualizado pelo context
 ABOUT - Link para o portfolio e Github
 
