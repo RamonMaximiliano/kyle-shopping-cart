@@ -7,12 +7,14 @@ type ItemProps = {
     price?: number,
     imgUrl?: any,
     quantity?: number
-    plusItem?:()=>void,
-    minusItem?: ()=>void,
+    plusItem?:(e:any)=> void,
+    minusItem?:(e:any)=> void,
+    setCartItems?:()=>void
 }
 
-export const StoreItem = ({ key, name, price, imgUrl, id,plusItem,minusItem }: ItemProps) => {
-    let test: number = 5
+export const StoreItem = ({ key, name, price, imgUrl, id,plusItem,minusItem,quantity,setCartItems }: ItemProps) => {
+    let quantityNumber: number = Number(quantity)
+    let identification = {id}
     return (
         <div className="single-item">
             <img src={imgUrl} alt="test" />
@@ -22,19 +24,19 @@ export const StoreItem = ({ key, name, price, imgUrl, id,plusItem,minusItem }: I
                 </div>
                 <div>
                     {
-                        test >= 1 ?
+                       quantityNumber >= 1 ?
                             <div className="item-buttons-div">
                                 <div className="item-quantity-button">
-                                    <button onClick={minusItem}>-</button>
-                                    <p>0</p>
-                                    <button onClick={plusItem}>+</button>
+                                    <button onClick={() => minusItem?.(id)}>-</button>
+                                    <p>{quantity}</p>
+                                    <button onClick={() => plusItem?.(id)}>+</button>
                                 </div>
-                                <button className="remove">Remove</button>
+                                <button className="remove" >Remove</button>
                             </div>
 
                             :
                             <div className="item-buttons-div">
-                                <button className="add-button">+ Add to Cart</button>
+                                <button className="add-button" onClick={() => plusItem?.(id)}>+ Add to Cart</button>
                             </div>
                     }
                 </div>

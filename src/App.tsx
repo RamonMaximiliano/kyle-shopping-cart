@@ -18,15 +18,18 @@ type ItemCheck = {
 
 function App() {
   const [cartItems,setCartItems] = useState<ItemCheck[]>(itemsArray)
-  function plusItem(){
-    console.log('Plus')
+
+
+  const plusItem = function(e:any){
+    console.log(e)
   }
-  function minusItem(){
-    console.log('Minus')
+  const minusItem = function(e:any){
+    console.log(e)
   }
+
   return (
     <>
-    <ShoppingCartContext.Provider value={{cartItems,plusItem, minusItem}}>
+    <ShoppingCartContext.Provider value={{cartItems,plusItem, minusItem,setCartItems}}>
     <div>
       <NavBar/>
       </div>
@@ -44,6 +47,10 @@ function App() {
 export default App;
 
 /* 
+
+
+Já peguei o ID de cada item sendo clicado, utilizar o ID para alterar a quantity do state: cartItems
+
 
 HOME - Na home page, fazer um carrosel de produtos girando a cada tantos segundos e conforme a foto embaixo um banner com descrição do produto e detalhes técnicos do mesmo que atualiza conforme a foto do carrosel 
 

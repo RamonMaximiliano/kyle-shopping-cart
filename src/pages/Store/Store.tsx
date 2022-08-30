@@ -10,8 +10,8 @@ type storeItem = {
     price?: number,
     imgUrl?: any,
     quantity?: number,
-    plusItem?: ()=>void,
-    minusItem?: ()=>void,
+    plusItem?:(e:any)=> void,
+    minusItem?:(e:any)=> void,
 }
 
 
@@ -23,7 +23,7 @@ export function Store() {
             <div className="store-div">
             {
                 cartItems.map((item:storeItem) => 
-                    <StoreItem name={item.name} imgUrl={item.imgUrl} price={item.price} key={item.id} id={item.id} plusItem={plusItem} minusItem={minusItem}></StoreItem>
+                    <StoreItem name={item.name} imgUrl={item.imgUrl} price={item.price} key={item.id} id={item.id} plusItem={plusItem} minusItem={minusItem} quantity={item.quantity}></StoreItem>
                 )
             }       
             </div>      
