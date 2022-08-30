@@ -1,16 +1,32 @@
-import React from 'react';
+import {useState} from 'react';
 import './App.css';
 import { About } from './pages/About'
 import { Home } from './pages/Home'
-import { ShoppingCart } from './context/ShoppingCartContext'
+import { ShoppingCartContext } from './context/ShoppingCartContext'
 import { Store } from './pages/Store/Store'
 import {NavBar} from './components/NavBar/NavBar'
 import { Routes, Route } from 'react-router-dom'
+import itemsArray from './data/items'
+
+type ItemCheck = {
+  id?:number,
+  name?:string,
+  price?:number,
+  imgUrl?:string,
+  quantity?: number
+}
 
 function App() {
+  const [cartItems,setCartItems] = useState<ItemCheck[]>(itemsArray)
+  function plusItem(){
+    console.log('Plus')
+  }
+  function minusItem(){
+    console.log('Minus')
+  }
   return (
     <>
-    <ShoppingCart>
+    <ShoppingCartContext.Provider value={{cartItems,plusItem, minusItem}}>
     <div>
       <NavBar/>
       </div>
@@ -19,7 +35,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/store" element={<Store />}></Route>
       </Routes>
-      </ShoppingCart>
+      </ShoppingCartContext.Provider>
     </>
 
   );
@@ -27,12 +43,7 @@ function App() {
 
 export default App;
 
-
-
 /* 
-
-
-https://devtrium.com/posts/how-use-react-context-pro
 
 HOME - Na home page, fazer um carrosel de produtos girando a cada tantos segundos e conforme a foto embaixo um banner com descrição do produto e detalhes técnicos do mesmo que atualiza conforme a foto do carrosel 
 

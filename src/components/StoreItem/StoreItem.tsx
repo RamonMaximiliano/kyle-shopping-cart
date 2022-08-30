@@ -7,9 +7,11 @@ type ItemProps = {
     price?: number,
     imgUrl?: any,
     quantity?: number
+    plusItem?:()=>void,
+    minusItem?: ()=>void,
 }
 
-export const StoreItem = ({ key, name, price, imgUrl, id }: ItemProps) => {
+export const StoreItem = ({ key, name, price, imgUrl, id,plusItem,minusItem }: ItemProps) => {
     let test: number = 5
     return (
         <div className="single-item">
@@ -23,9 +25,9 @@ export const StoreItem = ({ key, name, price, imgUrl, id }: ItemProps) => {
                         test >= 1 ?
                             <div className="item-buttons-div">
                                 <div className="item-quantity-button">
-                                    <button>-</button>
+                                    <button onClick={minusItem}>-</button>
                                     <p>0</p>
-                                    <button>+</button>
+                                    <button onClick={plusItem}>+</button>
                                 </div>
                                 <button className="remove">Remove</button>
                             </div>
