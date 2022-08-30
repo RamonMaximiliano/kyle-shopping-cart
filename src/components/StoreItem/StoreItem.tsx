@@ -9,10 +9,10 @@ type ItemProps = {
     quantity: number,
     plusItem?:(e:any)=> void,
     minusItem?:(e:any)=> void,
-    setCartItems?:()=>void
+    removeItem?:(e:any)=> void,
 }
 
-export const StoreItem = ({ key, name, price, imgUrl, id,plusItem,minusItem,quantity,setCartItems }: ItemProps) => {
+export const StoreItem = ({ name, price, imgUrl, id,plusItem,minusItem,quantity,removeItem }: ItemProps) => {
     let quantityNumber: number = Number(quantity)
     return (
         <div className="single-item">
@@ -30,9 +30,8 @@ export const StoreItem = ({ key, name, price, imgUrl, id,plusItem,minusItem,quan
                                     <p>{quantity}</p>
                                     <button onClick={() => plusItem?.(id)}>+</button>
                                 </div>
-                                <button className="remove" >Remove</button>
+                                <button className="remove" onClick={() => removeItem?.(id)}>Remove</button>
                             </div>
-
                             :
                             <div className="item-buttons-div">
                                 <button className="add-button" onClick={() => plusItem?.(id)}>+ Add to Cart</button>
