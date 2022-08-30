@@ -20,12 +20,25 @@ function App() {
   const [cartItems,setCartItems] = useState<ItemCheck[]>(itemsArray)
 
   const plusItem = function(e:any){
-    console.log(e)
+    const newState = cartItems.map(item => {
+      if(item.id == e){
+        return {...item, quantity: item.quantity += 1}
+      } else {
+        return item
+      }
+    })
+    setCartItems(newState)
   }
 
   const minusItem = function(e:any){
-    console.log(e)
-  }
+    const newState = cartItems.map(item => {
+      if(item.id == e){
+        return {...item, quantity: item.quantity -= 1}
+      } else {
+        return item
+      }
+    })
+    setCartItems(newState)  }
 
   return (
     <>
@@ -61,4 +74,12 @@ ABOUT - Link para o portfolio e Github
 https://www.youtube.com/watch?v=lATafp15HWA&ab_channel=WebDevSimplified
 
 
+
+Set logic for Remove button
+
+GET QUANTITY:
+
+https://bobbyhadz.com/blog/react-update-object-in-array#:~:text=To%20update%20an%20object%20in,all%20other%20objects%20as%20is.
+
+https://bobbyhadz.com/blog/react-update-state-array-of-objects
 */
