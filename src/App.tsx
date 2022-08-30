@@ -13,16 +13,16 @@ type ItemCheck = {
   name?:string,
   price?:number,
   imgUrl?:string,
-  quantity?: number
+  quantity: number
 }
 
 function App() {
   const [cartItems,setCartItems] = useState<ItemCheck[]>(itemsArray)
 
-
   const plusItem = function(e:any){
     console.log(e)
   }
+
   const minusItem = function(e:any){
     console.log(e)
   }

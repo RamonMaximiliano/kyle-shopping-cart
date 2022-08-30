@@ -3,7 +3,7 @@ type ItemCheck = {
   name?:string,
   price?:number,
   imgUrl?:string,
-  quantity?: number
+  quantity: number
 }
 
 const itemsArray:ItemCheck[] = [

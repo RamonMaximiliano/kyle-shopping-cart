@@ -6,7 +6,7 @@ type ItemProps = {
     name?: string,
     price?: number,
     imgUrl?: any,
-    quantity?: number
+    quantity: number,
     plusItem?:(e:any)=> void,
     minusItem?:(e:any)=> void,
     setCartItems?:()=>void
@@ -14,7 +14,6 @@ type ItemProps = {
 
 export const StoreItem = ({ key, name, price, imgUrl, id,plusItem,minusItem,quantity,setCartItems }: ItemProps) => {
     let quantityNumber: number = Number(quantity)
-    let identification = {id}
     return (
         <div className="single-item">
             <img src={imgUrl} alt="test" />

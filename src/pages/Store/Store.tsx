@@ -9,14 +9,14 @@ type storeItem = {
     name?: string,
     price?: number,
     imgUrl?: any,
-    quantity?: number,
+    quantity: number,
     plusItem?:(e:any)=> void,
     minusItem?:(e:any)=> void,
 }
 
 
 export function Store() {
-    const {test,plusItem,minusItem,cartItems} = useContext(ShoppingCartContext)
+    const {plusItem,minusItem,cartItems} = useContext(ShoppingCartContext)
     return (
         <>
             <h2 className="store-title">Store</h2>
