@@ -1,18 +1,22 @@
 import './styles.css'
 import itemsArray from "../../data/items"
 import { StoreItem } from '../../components/StoreItem/StoreItem'
-
-/* console.log(itemsArray) */
+import  {ShoppingCart} from '../../context/ShoppingCartContext'
+import  {useContext} from 'react'
 
 type storeItem = {
     id?: number,
     name?: string,
     price?: number,
-    imgUrl?: any
+    imgUrl?: any,
+    quantity?: number
 }
 
 
 export function Store() {
+
+    const {test} = useContext(ShoppingCart)
+
     return (
         <>
             <h2 className="store-title">Store</h2>
