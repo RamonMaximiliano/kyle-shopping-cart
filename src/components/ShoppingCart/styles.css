@@ -6,6 +6,8 @@
 
 .main-div {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     position: absolute;
     width: 0px;
     min-height: 1000px;
@@ -14,5 +16,30 @@
 }
 
 .show-cart {
-    width: 500px;
+    width: 80%;
+}
+
+.max-item-info{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    background-color: rgb(0, 255, 157);
+}
+
+.item-info{
+   max-width: 250px;
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.item-total{
+    padding-right:10px;
+    text-align:right;
+    width:150px;
+}
+
+.cart-image{
+    max-width:100px;
 }
