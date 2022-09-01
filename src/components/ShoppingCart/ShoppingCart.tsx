@@ -50,7 +50,7 @@ export const Cart = () => {
                     </div>
                 )
             }
-            <div>
+            <div className="total-max">
                 <h2>Total</h2>
                 <p>R$ {totalSum.toFixed(2)}</p>
             </div>

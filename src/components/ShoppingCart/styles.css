@@ -13,10 +13,11 @@
     min-height: 1000px;
     background-color: red;
     transition: 0.5s;
+    text-align: right;
 }
 
 .show-cart {
-    width: 80%;
+    width: 70%;
 }
 
 .max-item-info{
@@ -25,6 +26,7 @@
     justify-content: space-between;
     max-width: 100%;
     background-color: rgb(0, 255, 157);
+    text-align: center;
 }
 
 .item-info{
@@ -42,4 +44,9 @@
 
 .cart-image{
     max-width:100px;
+}
+
+.total-max{
+    padding-right: 10px;
+    width:100%;
 }
