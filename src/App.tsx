@@ -5,6 +5,7 @@ import { Home } from './pages/Home'
 import { ShoppingCartContext } from './context/ShoppingCartContext'
 import { Store } from './pages/Store/Store'
 import { NavBar } from './components/NavBar/NavBar'
+import { Cart } from './components/ShoppingCart/ShoppingCart'
 import { Routes, Route } from 'react-router-dom'
 import itemsArray from './data/items'
 
@@ -52,12 +53,23 @@ function App() {
     setCartItems(newState)
   }
 
+  const [showCart, setCart] = useState<boolean>(false)
+
+  function setCartTrue() {
+    if (showCart!) {
+      setCart(false)
+    } else {
+      setCart(true)
+    }
+  }
+
   return (
     <>
-      <ShoppingCartContext.Provider value={{ cartItems, plusItem, minusItem, setCartItems, removeItem }}>
+      <ShoppingCartContext.Provider value={{ cartItems, plusItem, minusItem, setCartItems, removeItem, showCart, setCartTrue }}>
         <div>
           <NavBar />
         </div>
+        <Cart />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>

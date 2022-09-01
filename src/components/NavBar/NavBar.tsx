@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import cart from '../../images/cart.png'
 import './styles.css'
-
-function test() {
-    console.log("Hello there!")
-}
+import { useContext } from 'react'
+import { ShoppingCartContext } from '../../context/ShoppingCartContext'
 
 export const NavBar = () => {
+    const {setCartTrue} = useContext(ShoppingCartContext)
+
     return (
         <div className="nav-bar">
             <div className="nav-items">
@@ -14,7 +14,7 @@ export const NavBar = () => {
                 <Link to='/store' className="nav-items-link"><p>Store</p></Link>
                 <Link to='/about' className="nav-items-link"><p>About</p></Link>
             </div>
-            <button className="cart-button" style={{ backgroundImage: `url(${cart})` }} onClick={test}></button>
+            <button className="cart-button" style={{ backgroundImage: `url(${cart})` }} onClick={setCartTrue}></button>
         </div>
     )
 }
