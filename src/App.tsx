@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import { About } from './pages/About'
-import { Home } from './pages/Home'
+import { About } from './pages/About/About'
+import { Home } from './pages/Home/Home'
 import { ShoppingCartContext } from './context/ShoppingCartContext'
 import { Store } from './pages/Store/Store'
 import { NavBar } from './components/NavBar/NavBar'
@@ -77,7 +77,6 @@ function App() {
         </Routes>
       </ShoppingCartContext.Provider>
     </>
-
   );
 }
 
@@ -85,17 +84,12 @@ export default App;
 
 /* 
 
-
 HOME - Na home page, fazer um carrosel de produtos girando a cada tantos segundos e conforme a foto embaixo um banner com descrição do produto e detalhes técnicos do mesmo que atualiza conforme a foto do carrosel 
 
-SHOPPING CART PAGE: dinamic on the right when you click in the cart, add also a finish purchase button with window alert
 ABOUT - Link para o portfolio e Github
 
-https://www.youtube.com/watch?v=lATafp15HWA&ab_channel=WebDevSimplified
-
 GET QUANTITY:
-
 https://bobbyhadz.com/blog/react-update-object-in-array#:~:text=To%20update%20an%20object%20in,all%20other%20objects%20as%20is.
-
 https://bobbyhadz.com/blog/react-update-state-array-of-objects
+
 */

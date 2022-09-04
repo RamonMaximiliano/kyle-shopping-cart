@@ -28,31 +28,41 @@ export const Cart = () => {
         totalSum += buyingList![x].price
     } 
 
+    function finishBuy(){
+        if(buyingList.length != 0){
+        alert("Thanks for buying!!!")
+    } else {
+        alert("Please buy something!!!")
+    }
+}
     return (
         <div className={`main-div ${showCart! ? "show-cart" : null}`}>
             {
                 buyingList!.map((item: ItemCheck) =>
-                    <div className="max-item-info">
-                        <div className="item-info">
-                            <div>
-                                <img src={item.imgUrl} className="cart-image" />
+                    <div className={`max-item-info ${showCart! ? "max-item-info-show" : null}`}>
+                        <div className={`item-info ${showCart! ? "item-info-show" : null}`}>
+                            <div className={`small ${showCart! ? "small-show" : null}`}>
+                                <img src={item.imgUrl} className={`cart-image ${showCart! ? "cart-image-show" : null}`}></img> 
                             </div>
-                            <div className="item-total">
-                                <p>{item.name}</p>
-                                <p>R$ {item.price}</p>
-                                <p>{item.quantity}</p>
+                            <div className={`item-total ${showCart! ? "item-total-show" : null}`}>
+                                <p className={`small ${showCart! ? "small-show" : null}`}>{item.name}</p>
+                                <p className={`small ${showCart! ? "small-show" : null}`}>R$ {item.price}</p>
+                                <p className={`small ${showCart! ? "small-show" : null}`}>{item.quantity}</p>
                             </div>
                         </div>
-                        <div className="item-total">
-                            <h3>Item total</h3>
-                            <p>R$ {(item.quantity) * (item!.price)}</p>
+                        <div className={`item-total ${showCart! ? "item-total-show" : null}`}>
+                            <h3 className={`small ${showCart! ? "small-show" : null}`}>Item total</h3>
+                            <p className={`small ${showCart! ? "small-show" : null}`}>R$ {((item.quantity) * (item!.price)).toFixed(2)}</p>
                         </div>
                     </div>
                 )
             }
-            <div className="total-max">
-                <h2>Total</h2>
-                <p>R$ {totalSum.toFixed(2)}</p>
+            <div className={`total-max ${showCart! ? "total-max-show" : null}`}>
+                <h2 className={`small ${showCart! ? "small-show" : null}`}>Total</h2>
+                <p className={`small ${showCart! ? "small-show" : null}`}>R$ {totalSum.toFixed(2)}</p>
+            </div>
+            <div className={`buy-button-div ${showCart! ? "buy-button-div-show" : null}`}>
+                <button className={`buy-button ${showCart! ? "buy-button-show" : null}`} onClick={finishBuy}>Buy</button>
             </div>
         </div>
     )

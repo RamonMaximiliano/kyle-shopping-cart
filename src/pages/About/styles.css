@@ -1,0 +1,27 @@
+.about{
+    width:200px;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding:30px;
+}
+
+
+.about-item{
+    text-decoration: none;
+    margin-bottom: 20px;
+    width:150px;
+    background-color: #091fec;
+    height: 40px;
+    color:white;
+    align-items: center;
+    text-align: center;
+    line-height: 250%;
+    border-radius: 5px;
+}
+
+.about-item:hover{
+    background-color: #2337f0;
+} 

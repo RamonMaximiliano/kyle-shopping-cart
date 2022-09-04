@@ -18,7 +18,7 @@ export const StoreItem = ({ name, price, imgUrl, id,plusItem,minusItem,quantity,
         <div className="single-item">
             <img src={imgUrl} alt="test" />
             <div className="totalItem-info">
-                <div className="item-info">
+                <div className="item-info-store">
                     <h3>{name}</h3><p>R$ {price}</p>
                 </div>
                 <div>
