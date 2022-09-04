@@ -11,7 +11,7 @@ const itemsArray:ItemCheck[] = [
       id: 1,
       name: "Micro-ondas",
       price: 232.99,
-      imgUrl: '/images/micro.JPG',
+      imgUrl: './images/micro.JPG',
       quantity:0
     },
     {
