@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/kyle-shopping-cart/static/css/main.b895d95b.css",
+    "main.js": "/kyle-shopping-cart/static/js/main.569164f7.js",
+    "static/js/787.c725789b.chunk.js": "/kyle-shopping-cart/static/js/787.c725789b.chunk.js",
+    "static/media/cart.png": "/kyle-shopping-cart/static/media/cart.f326953492b1a8a4ee01.png",
+    "index.html": "/kyle-shopping-cart/index.html",
+    "main.b895d95b.css.map": "/kyle-shopping-cart/static/css/main.b895d95b.css.map",
+    "main.569164f7.js.map": "/kyle-shopping-cart/static/js/main.569164f7.js.map",
+    "787.c725789b.chunk.js.map": "/kyle-shopping-cart/static/js/787.c725789b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b895d95b.css",
+    "static/js/main.569164f7.js"
+  ]
+}
