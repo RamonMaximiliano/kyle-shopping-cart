@@ -13,7 +13,7 @@
     text-decoration: none;
     margin-bottom: 20px;
     width:150px;
-    background-color: #091fec;
+    background-color: #320889;
     height: 40px;
     color:white;
     align-items: center;
@@ -23,5 +23,5 @@
 }
 
 .about-item:hover{
-    background-color: #2337f0;
+    background-color: #532ca1;
 } 
