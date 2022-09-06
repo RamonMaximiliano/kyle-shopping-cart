@@ -40,7 +40,6 @@ export function Home() {
                         <div className="tv"></div>
                     </div>
                 </div>
-
                 <div className="buttons">
                     <div>
                         <div className="left"  style={{ backgroundImage: `url(${left})` }}></div>
@@ -51,18 +50,16 @@ export function Home() {
                 </div>
 
                 <div className="radios">
-                    <input type="radio"></input>
-                    <input type="radio"></input>
-                    <input type="radio"></input>
-                    <input type="radio"></input>
-                    <input type="radio"></input>
-                    <input type="radio"></input>
-                    <input type="radio"></input>
-                    <input type="radio"></input>
-                    <input type="radio"></input>
+                    <div className="radio-button"></div>
+                    <div className="radio-button"></div>
+                    <div className="radio-button"></div>
+                    <div className="radio-button"></div>
+                    <div className="radio-button"></div>
+                    <div className="radio-button"></div>
+                    <div className="radio-button"></div>
+                    <div className="radio-button"></div>
+                    <div className="radio-button"></div>
                 </div>
-
-
             </div>
         </>
     )
