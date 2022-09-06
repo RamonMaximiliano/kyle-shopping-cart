@@ -1,17 +1,25 @@
 {
   "files": {
-    "main.css": "./static/css/main.86222b45.css",
-    "main.js": "./static/js/main.28143daf.js",
+    "main.css": "./static/css/main.49b6acb6.css",
+    "main.js": "./static/js/main.69eb0bc5.js",
     "static/js/787.c725789b.chunk.js": "./static/js/787.c725789b.chunk.js",
+    "static/media/fogão.JPG": "./static/media/fogão.73448e4cc851d12b0072.JPG",
+    "static/media/liquidificador.JPG": "./static/media/liquidificador.8a576415c7b9b5c98e77.JPG",
+    "static/media/tv.JPG": "./static/media/tv.bec15b5adf5d467b7da3.JPG",
+    "static/media/sofa.JPG": "./static/media/sofa.45a36271a0a813461ab5.JPG",
     "static/media/torradeira.JPG": "./static/media/torradeira.8775131ba824b8fb504e.JPG",
+    "static/media/geladeira.JPG": "./static/media/geladeira.3a4c277214742766cd94.JPG",
+    "static/media/micro.JPG": "./static/media/micro.04eb0a6b046f560c4aaf.JPG",
+    "static/media/lavadoura.JPG": "./static/media/lavadoura.d425017f580e1a098dd2.JPG",
+    "static/media/mesa.JPG": "./static/media/mesa.27ffdd34b6a8a5d3fb98.JPG",
     "static/media/cart.png": "./static/media/cart.f326953492b1a8a4ee01.png",
     "index.html": "./index.html",
-    "main.86222b45.css.map": "./static/css/main.86222b45.css.map",
-    "main.28143daf.js.map": "./static/js/main.28143daf.js.map",
+    "main.49b6acb6.css.map": "./static/css/main.49b6acb6.css.map",
+    "main.69eb0bc5.js.map": "./static/js/main.69eb0bc5.js.map",
     "787.c725789b.chunk.js.map": "./static/js/787.c725789b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86222b45.css",
-    "static/js/main.28143daf.js"
+    "static/css/main.49b6acb6.css",
+    "static/js/main.69eb0bc5.js"
   ]
 }
