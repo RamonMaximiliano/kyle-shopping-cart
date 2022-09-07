@@ -6,26 +6,48 @@
 
 
 .home-title{
-    width:280px;
+    max-width:360px;
+    word-wrap: normal;
     margin:auto;
     color:rgb(7, 31, 165);
+    padding:5px;
 }
+
+.home-text{
+    color:rgb(7, 31, 165);
+    font-weight: bold;
+    max-width:900px;
+    margin:auto;
+    margin-top:50px;
+    word-wrap: normal;
+    padding:5px;
+    text-align: center;
+}
+
+.Ramon{
+    max-width:200px;
+    margin:auto;
+    font-size: 20px;
+    word-wrap: normal;
+    padding:5px;
+    margin-top:50px;
+    color:rgb(0, 21, 139);
+}
+
 
 .slide-area{
     max-width:900px;
     height:360px;
     overflow:hidden;
     margin:auto;
-    margin-top:80px;
+    margin-top:50px;
     border-radius:10px;
 }
 
-
-/* Trabalhar para mudar o margin left abaixo
- */.slide-images{
+.slide-images{
     display:flex;
     width:5000px;
-    margin-left:0px;
+    transition: all 1s;
 }
 
 .slide-images img{
@@ -57,55 +79,7 @@
 .radio-button:hover{
     background-color:blue;
 }
-
-
 /* RADIOS */
-
-
-/* BUTTONS */
-
-.buttons{
-    width:850px;
-    padding:20px;
-    margin:auto;
-    margin-top:-220px;
-    display:flex;
-    justify-content: space-between;
-    position:absolute;
-    background: none;
-}
-
-.left{
-    position:absolute;
-    width:50px;
-    height:50px;
-    background-size: cover;
-    border:none;   
-    background-color: transparent;
-    cursor:pointer;
-}
-
-.left:hover{
-    transform: scale(1.1);
-    transition: all 0.1s ease-in;
-}
-
-.right{
-    position:absolute;
-    width:50px;
-    height:50px;
-    background-size: cover;
-    border:none;   
-    background-color: transparent;
-    cursor:pointer;
-}
-
-.right:hover{
-    transform: scale(1.1);
-    transition: all 0.1s ease-in;
-}
-/* BUTTONS */
-
 
 /* SLIDE ITEMS */
 .torradeira{

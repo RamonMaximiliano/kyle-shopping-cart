@@ -1,17 +1,28 @@
-import left from '../../images/previous.png'
-import right from '../../images/next.png'
-
 import './styles.css'
-
+import { useEffect, useState } from 'react'
 
 export function Home() {
+    let [timer, setTimer] = useState<number>(0)
+
+    useEffect(
+        ()=> {
+            setTimeout(()=>{
+                if (timer < 7200){
+                setTimer(timer += 900)}
+                else {
+                    setTimer(0)}
+           }, 4000)
+        }
+    )
+
+
     return (
         <>
             <div className="home-title">
-                <h2>Check our promotions!</h2>
+                <h1>Check our promotions!</h1>
             </div>
             <div className="slide-area">
-                <div className="slide-images">
+                <div className="slide-images"  style={{ marginLeft: `-${timer}px` }} >
                     <div>
                         <div className="torradeira"></div>
                     </div>
@@ -40,41 +51,24 @@ export function Home() {
                         <div className="tv"></div>
                     </div>
                 </div>
-                <div className="buttons">
-                    <div>
-                        <div className="left"  style={{ backgroundImage: `url(${left})` }}></div>
-                    </div>
-                    <div>
-                        <div className="right" style={{ backgroundImage: `url(${right})` }}></div>
-                    </div>
-                </div>
 
                 <div className="radios">
-                    <div className="radio-button"></div>
-                    <div className="radio-button"></div>
-                    <div className="radio-button"></div>
-                    <div className="radio-button"></div>
-                    <div className="radio-button"></div>
-                    <div className="radio-button"></div>
-                    <div className="radio-button"></div>
-                    <div className="radio-button"></div>
-                    <div className="radio-button"></div>
+                     <div className="radio-button" style={{ backgroundColor: `${timer == 0 ? "blue" : "transparent"}`}}></div>
+                     <div className="radio-button" style={{ backgroundColor: `${timer == 900 ? "blue" : "transparent"}`}}></div>
+                     <div className="radio-button" style={{ backgroundColor: `${timer == 1800 ? "blue" : "transparent"}`}}></div>
+                     <div className="radio-button" style={{ backgroundColor: `${timer == 2700 ? "blue" : "transparent"}`}}></div>
+                     <div className="radio-button" style={{ backgroundColor: `${timer == 3600 ? "blue" : "transparent"}`}}></div>
+                     <div className="radio-button" style={{ backgroundColor: `${timer == 4500 ? "blue" : "transparent"}`}}></div>
+                     <div className="radio-button" style={{ backgroundColor: `${timer == 5400 ? "blue" : "transparent"}`}}></div>
+                     <div className="radio-button" style={{ backgroundColor: `${timer == 6300 ? "blue" : "transparent"}`}}></div>
+                     <div className="radio-button" style={{ backgroundColor: `${timer == 7200 ? "blue" : "transparent"}`}}></div>
                 </div>
             </div>
+
+            <p className="home-text">This simple shopping cart is a project to practice: React, Context API, React Router, TypeScript and some CSS</p>
+            <h1 className="Ramon">Created by Ramon</h1>
+
         </>
     )
 }
 
-
-/* 
-
-https://www.youtube.com/watch?v=XHfOyhkdlgc&ab_channel=OpenSource
-
-
-https://www.youtube.com/watch?v=0wvrlOyGlq0&ab_channel=CodingSnow 
-
-https://www.youtube.com/watch?v=KcdBOoK3Pfw&ab_channel=DevEd
-
-
-
-*/
